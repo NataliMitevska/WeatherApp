@@ -1,0 +1,86 @@
+body, html {
+    height: 100%;
+    margin:0;
+    transition: background 1s, color 0.4s;
+   
+}
+
+.light-mode {
+    background: url('photos/light1.jpg');
+    color: #f50101;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    }
+    
+    .switch {
+        position: fixed;
+        display:inline-block;
+        width:60px;
+        height: 34px;
+        top: 10px; 
+        left: 10px;
+    }
+    
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color:rgb(248, 248, 248);
+        transition: 0.4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color:rgb(252, 195, 244);
+        transition: 0.4s;
+
+        
+    }
+    input:checked+.slider {
+        background-color: #380a4b;
+    }
+    input:focus+.slider{
+        box-shadow: 0 0 1px #2196F3;
+    }
+    input:checked+.slider:before{
+        transform: translateX(26px);
+    }
+    .slider.round{
+        border-radius: 34px;
+    }
+    .slider.round:before {
+        border-radius: 50%;
+    }
+    
+   .light-mode .search-box input,
+   .light-mode .containe,
+   .light-mode .search-box input::placeholder,
+   .light-mode .search-box button,
+   .light-mode .weather-details,
+   .light-mode .weather-box .temperature,
+   .light-mode .weather-box .description,
+   .light-mode .container {
+    color: black;
+    transition: 1s;
+   }
+    
+
+   .light-mode .not-found img {
+    content: url('photos/LightModeEror.png');
+}
+
